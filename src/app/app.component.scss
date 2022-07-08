@@ -1,0 +1,23 @@
+$blueText: #01cbe0;
+$backgroundDark: #141414;
+$lightText: #f8f9fa;
+
+h1 {
+  color: $blueText;
+  font-size: 2rem;
+}
+
+span {
+  color: $lightText;
+}
+
+.card-img {
+  border-radius: 20px;
+}
+
+.search-results-container {
+  margin: 40px;
+  height: 350px;
+  width: 500px;
+  overflow: auto;
+}

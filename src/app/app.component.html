@@ -8,17 +8,12 @@
 
   <section class="container-lg gallery">
     <div
+      class="d-flex align-items-center justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3"
       infinite-scroll
-      [infiniteScrollDistance]="distance"
-      [infiniteScrollThrottle]="throttle"
-      (scrolled)="onScroll()"
+      (scrolled)="onScrollDown()"
     >
-      <div
-        class="d-flex align-items-center justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3"
-      >
-        <div *ngFor="let e of lis" class="p-2" style="width: 18rem">
-          <img src="{{ e.image }}" class="card-img" alt="{{ e.name }}" />
-        </div>
+      <div *ngFor="let e of lis" class="p-2" style="width: 18rem">
+        <img src="{{ e.image }}" class="card-img" alt="{{ e.name }}" />
       </div>
     </div>
   </section>

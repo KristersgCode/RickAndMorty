@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
-export class BreweryService {
+export class CharacterService {
   constructor(private http: HttpClient) {}
 
-  getBreweries(page: number) {
+  getCharacters(page: number) {
     return this.http.get(
       `https://rickandmortyapi.com/api/character?page=${page}&per_page=20`
     );

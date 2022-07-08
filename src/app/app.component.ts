@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BreweryService } from './app.service';
+import { CharacterService } from './app.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,24 +8,22 @@ import { BreweryService } from './app.service';
 })
 export class AppComponent implements OnInit {
   throttle = 0;
-  distance = 2;
+  distance = 3;
   page = 2;
   li: any;
   lis: any = [];
 
-  constructor(private breweryService: BreweryService) {}
+  constructor(private characterService: CharacterService) {}
   ngOnInit(): void {
-    this.breweryService.getBreweries(this.page).subscribe((Response) => {
+    this.characterService.getCharacters(this.page).subscribe((Response) => {
       console.log(Response);
+      console.log('Fetching data');
       this.li = Response;
       this.lis = this.li.results;
     });
   }
-  onScroll(): void {
-    this.breweryService.getBreweries(++this.page).subscribe((Response) => {
-      console.log('New fetch');
-      this.li = Response;
-      this.lis = this.li.results;
-    });
+  onScrollDown(): void {
+    this.page++;
+    this.ngOnInit();
   }
 }

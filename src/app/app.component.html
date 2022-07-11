@@ -1,21 +1,16 @@
-<!-- <div *ngFor="let e of lis">
-  <img src="{{ e.image }}" alt="{{ e.name }}" />
-</div> -->
-<div class="page">
+<header>
   <h1 class="text-center mt-4">
     Rick <span>and</span> Morty <span>images</span>
   </h1>
-
-  <section class="container-lg gallery">
-    <div
-      class="d-flex align-items-center justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3"
-      infinite-scroll
-      (scrolled)="onScrollDown()"
-    >
-      <div *ngFor="let e of lis" class="p-2" style="width: 18rem">
-        <img src="{{ e.image }}" class="card-img" alt="{{ e.name }}" />
-      </div>
+</header>
+<section class="container-lg">
+  <div
+    class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3"
+    infinite-scroll
+    (scrolled)="onScrollDown()"
+  >
+    <div *ngFor="let data of lis" class="p-2" style="width: 18rem">
+      <img src="{{ data.image }}" class="card-img" alt="{{ data.name }}" />
     </div>
-  </section>
-</div>
-<router-outlet></router-outlet>
+  </div>
+</section>

@@ -1,5 +1,4 @@
 $blueText: #01cbe0;
-$backgroundDark: #141414;
 $lightText: #f8f9fa;
 
 h1 {
@@ -13,11 +12,9 @@ span {
 
 .card-img {
   border-radius: 20px;
-}
 
-.search-results-container {
-  margin: 40px;
-  height: 350px;
-  width: 500px;
-  overflow: auto;
+  &:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s;
+  }
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
